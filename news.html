@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Club News - The Ainlay Chess Club</title>
-        <meta name="description" content="Catch up on the latest announcements, match updates, and news from The Ainlay Chess Club." />
+        <meta
+            name="description"
+            content="Catch up on the latest announcements, match updates, and news from The Ainlay Chess Club."
+        />
         <link rel="stylesheet" href="style.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
@@ -26,6 +29,20 @@
             </nav>
         </header>
 
-       
+        <script>
+            function playRickroll(container) {
+                const wrapper = container.querySelector(".video-frame-wrapper");
+                wrapper.innerHTML = `
+        <iframe width="100%" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+            title="Rickroll" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    `;
+                container.querySelector(".video-cover-overlay").style.display = "none";
+            }
+        </script>
     </body>
 </html>
