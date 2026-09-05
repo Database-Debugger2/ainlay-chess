@@ -29,18 +29,36 @@
             </nav>
         </header>
 
+        <!-- Main Content Area -->
+        <main style="padding: 5rem 5%; max-width: 800px; margin: 0 auto;">
+            <article class="card" style="padding: 2rem;">
+                <!-- Message text -->
+                <p class="team-bio" style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 1.5rem;">
+                    "Make sure to review this official strategy breakdown before our first club meeting for this year."
+                </p>
+                
+                <!-- Video container -->
+                <div class="custom-video-container" onclick="playRickroll(this)">
+                    <div class="video-cover-overlay">
+                        <span>▶ Click to watch video</span>
+                    </div>
+                    <div class="video-frame-wrapper"></div>
+                </div>
+            </article>
+        </main>
+
         <script>
             function playRickroll(container) {
                 const wrapper = container.querySelector(".video-frame-wrapper");
                 wrapper.innerHTML = `
-        <iframe width="100%" height="315" 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
-            title="Rickroll" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    `;
+                    <iframe width="100%" height="315" 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                        title="Rickroll" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                `;
                 container.querySelector(".video-cover-overlay").style.display = "none";
             }
         </script>
