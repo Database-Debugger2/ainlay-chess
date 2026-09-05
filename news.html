@@ -46,19 +46,18 @@
                 </div>
             </article>
         </main>
-
+        
         <script>
             function playRickroll(container) {
                 const wrapper = container.querySelector(".video-frame-wrapper");
                 wrapper.innerHTML = `
-                    <iframe width="100%" height="315" 
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
-                        title="Rickroll" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                `;
+        <iframe width="100%" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&start=42" 
+            title="Rickroll" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
                 container.querySelector(".video-cover-overlay").style.display = "none";
             }
         </script>
