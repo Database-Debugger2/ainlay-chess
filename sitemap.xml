@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Home Page -->
     <url>
-        <loc>https://ainlaychess.vercel.app/index.html</loc>
+        <loc>https://ainlay-chess.vercel.app/</loc>
         <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,15 +10,15 @@
 
     <!-- The Team Page -->
     <url>
-        <loc>https://ainlaychess.vercel.app/team.html</loc>
+        <loc>https://ainlay-chess.vercel.app/team</loc>
         <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- About Page (if applicable) -->
+    <!-- About Page -->
     <url>
-        <loc>https://ainlaychess.vercel.app/about.html</loc>
+        <loc>https://ainlay-chess.vercel.app/about</loc>
         <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
