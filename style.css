@@ -278,43 +278,28 @@ a:hover {
         0 0 20px var(--amber-dim);
 }
 
-.card-img-thanesh {
-    width: 100%;
-    height: 480px;
-    background-image: url('thanesh.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
+.card-img-thanesh,
+.card-img-ashley,
+.card-img-aryan,
+.team-img-thanesh,
+.team-img-ashley,
+.team-img-aryan {
+    width: 100%;
+    height: 480px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: filter 0.3s ease;
 }
 
-.card-img-ashley {
-    width: 100%;
-    height: 480px;
-    background-image: url('no-img.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
-}
+.card-img-thanesh, .team-img-thanesh { background-image: url('thanesh.jpg'); }
+.card-img-ashley, .team-img-ashley { background-image: url('no-img.jpg'); }
+.card-img-aryan, .team-img-aryan { background-image: url('aryan.jpg'); }
 
-.card-img-aryan {
-    width: 100%;
-    height: 480px;
-    background-image: url('aryan.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
-}
-
-.card:hover .card-img {
+.card:hover [class*="card-img-"],
+.team-card:hover [class*="team-img-"] {
     filter: brightness(1.1);
 }
 
@@ -647,51 +632,6 @@ a:hover {
         0 0 20px var(--amber-dim);
 }
 
-.team-img-thanesh {
-    width: 100%;
-    height: 480px;
-    background-image: url('thanesh.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.team-img-ashley {
-    width: 100%;
-    height: 480px;
-    background-image: url('no-img.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.team-img-aryan {
-    width: 100%;
-    height: 480px;
-    background-image: url('aryan.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .chess-icon-watermark {
     font-size: 3.5rem;
     color: rgba(217, 130, 43, 0.15);
@@ -870,7 +810,6 @@ a:hover {
 }
 
 .news-date {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.85rem;
     color: var(--amber-glow);
     letter-spacing: 0.05em;
@@ -878,7 +817,6 @@ a:hover {
 }
 
 .news-category {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.7rem;
     color: var(--text-muted);
     letter-spacing: 0.2em;
@@ -895,7 +833,6 @@ a:hover {
 }
 
 .news-content p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-muted);
