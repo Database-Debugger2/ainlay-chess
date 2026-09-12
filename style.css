@@ -279,45 +279,39 @@ a:hover {
 }
 
 .card-img-thanesh {
-    width: 100%;
-    height: 480px;
-    background-image: url('thanesh.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
+    width: 100%;
+    height: 480px;
+    background-image: url('thanesh.jpg');
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: filter 0.3s ease;
 }
 
 .card-img-ashley {
-    width: 100%;
-    height: 480px;
-    background-image: url('no-img.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
+    width: 100%;
+    height: 480px;
+    background-image: url('no-img.jpg');
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: filter 0.3s ease;
 }
 
 .card-img-aryan {
-    width: 100%;
-    height: 480px;
-    background-image: url('aryan.jpg');
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: filter 0.3s ease;
+    width: 100%;
+    height: 480px;
+    background-image: url('aryan.jpg');
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: filter 0.3s ease;
 }
 
 .card:hover .card-img {
@@ -654,54 +648,53 @@ a:hover {
 }
 
 .team-img-thanesh {
-    width: 100%;
-    height: 480px;
-    background-image: url('thanesh.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 480px;
+    background-image: url('thanesh.jpg');
+    margin-bottom: 1.2rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-img-ashley {
+    width: 100%;
+    height: 480px;
+    background-image: url('no-img.jpg');
+    margin-bottom: 1.2rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-img-ashley img {
     width: 100%;
-    height: 480px;
-    background-image: url('no-img.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    object-fit: contain; /* Keeps the whole image and text fully visible without distorting the layout */
 }
 
 .team-img-aryan {
-    width: 100%;
-    height: 480px;
-    background-image: url('aryan.jpg');
-    margin-bottom: 1.2rem;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bg-deep);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 480px;
+    background-image: url('aryan.jpg');
+    margin-bottom: 1.2rem;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chess-icon-watermark {
