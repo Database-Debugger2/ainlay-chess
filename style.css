@@ -284,8 +284,10 @@ a:hover {
     background-image: url('thanesh.jpg');
     margin-bottom: 1rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: filter 0.3s ease;
 }
@@ -296,8 +298,10 @@ a:hover {
     background-image: url('no-img.jpg');
     margin-bottom: 1rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: filter 0.3s ease;
 }
@@ -308,8 +312,10 @@ a:hover {
     background-image: url('aryan.jpg');
     margin-bottom: 1rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: filter 0.3s ease;
 }
@@ -653,8 +659,10 @@ a:hover {
     background-image: url('thanesh.jpg');
     margin-bottom: 1.2rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     position: relative;
     display: flex;
@@ -668,8 +676,10 @@ a:hover {
     background-image: url('no-img.jpg');
     margin-bottom: 1.2rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     position: relative;
     display: flex;
@@ -683,8 +693,10 @@ a:hover {
     background-image: url('aryan.jpg');
     margin-bottom: 1.2rem;
     border-radius: 4px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--bg-deep);
     border: 1px solid rgba(255, 255, 255, 0.03);
     position: relative;
     display: flex;
