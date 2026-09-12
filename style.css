@@ -279,7 +279,7 @@ a:hover {
 }
 
 .card-img-thanesh {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('thanesh.jpg');
     margin-bottom: 1rem;
@@ -291,7 +291,7 @@ a:hover {
 }
 
 .card-img-ashley {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('no-img.jpg');
     margin-bottom: 1rem;
@@ -303,7 +303,7 @@ a:hover {
 }
 
 .card-img-aryan {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('aryan.jpg');
     margin-bottom: 1rem;
@@ -648,7 +648,7 @@ a:hover {
 }
 
 .team-img-thanesh {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('thanesh.jpg');
     margin-bottom: 1.2rem;
@@ -663,7 +663,7 @@ a:hover {
 }
 
 .team-img-ashley {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('no-img.jpg');
     margin-bottom: 1.2rem;
@@ -678,7 +678,7 @@ a:hover {
 }
 
 .team-img-aryan {
-    width: 110%;
+    width: 105%;
     height: 480px;
     background-image: url('aryan.jpg');
     margin-bottom: 1.2rem;
