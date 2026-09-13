@@ -158,6 +158,7 @@ a:hover {
     background-image: url("../Images/knight-background.jpg");
     background-size: cover;
     background-position: center;
+    filter: brightness(1.25);
 }
 
 .hero-bg-overlay {
