@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Club News - The Ainlay Chess Club</title>
+        <meta
+            name="description"
+            content="Catch up on the latest announcements, match updates, and news from The Ainlay Chess Club."
+        />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <meta property="og:image" content="https://ainlay-chess.vercel.app/favicon.png" />
+        <meta
+            property="og:description"
+            content="Catch up on the latest announcements, match updates, and news from The Ainlay Chess Club."
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header class="site-header">
+            <div class="logo">
+                <a href="/" style="color: inherit; text-decoration: none"><span>♔</span> Back to Arena</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/about">About</a>
+                <a href="/news" class="active-link">News</a>
+                <a href="/team">Team</a>
+                <a href="index.html#league">League</a>
+                <a href="index.html#join" class="btn-outline">Request Invitation</a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main style="padding: 5rem 5%; max-width: 800px; margin: 0 auto">
+            <article class="card" style="padding: 2rem">
+                <!-- Message text -->
+                <p class="team-bio" style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 1.5rem">
+                    "Make sure to review this official strategy breakdown before our first club meeting for this year."
+                </p>
+
+                <!-- Video container -->
+                <div class="custom-video-container" onclick="playRickroll(this)">
+                    <div class="video-cover-overlay">
+                        <span>▶ Click to watch video</span>
+                    </div>
+                    <div class="video-frame-wrapper"></div>
+                </div>
+            </article>
+        </main>
+
+        <script>
+            function playRickroll(container) {
+                const wrapper = container.querySelector(".video-frame-wrapper");
+                wrapper.innerHTML = `
+                    <iframe width="100%" height="315" 
+                        src="https://www.youtube.com/embed/QDia3e12czc?autoplay=1&end=7" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+                container.querySelector(".video-cover-overlay").style.display = "none";
+            }
+        </script>
+
+        <!-- News Section -->
+        <section class="news-section">
+            <article class="news-item">
+                <div class="news-meta">
+                    <span class="news-date">12.09.26</span>
+                    <span class="news-category">Announcement</span>
+                </div>
+                <!-- First Meeting Announcement -->
+                <div class="news-content">
+                    <h2>Frst Meeting — Come Join us!</h2>
+                    <p>
+                        The Ainlay Chess Club is inviting you to join us for our first meeting on Thursday September 17
+                        (17.09.2026)—we're looking forward to seeing you all there!
+                    </p>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
