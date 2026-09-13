@@ -164,8 +164,8 @@ a:hover {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(9, 7, 6, 0.96) 35%, rgba(9, 7, 6, 0.75) 100%),
-        radial-gradient(circle at 75% 40%, rgba(217, 130, 43, 0.15) 0%, transparent 65%);
+        linear-gradient(90deg, rgba(9, 7, 6, 0.88) 35%, rgba(9, 7, 6, 0.60) 100%),
+        radial-gradient(circle at 75% 40%, rgba(217, 130, 43, 0.22) 0%, transparent 65%);
     z-index: 1;
 }
 
