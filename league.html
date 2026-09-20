@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta Information -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The League - The Ainlay Chess Club</title>
+
+        <!-- SEO & Open Graph Meta Tags -->
+        <meta
+            name="description"
+            content="View the official league standings, player rankings, win-loss records, and match histories for The Harry Ainlay Chess Club."
+        />
+        <meta
+            property="og:description"
+            content="View the official league standings, player rankings, win-loss records, and match histories for The Harry Ainlay Chess Club."
+        />
+        <meta property="og:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta name="google-site-verification" content="iSYLplXVBavn5GoDQEmi91O7fH8G3z6XSumjKIxFPuk" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="Images/favicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header class="site-header">
+            <div class="logo">
+                <a href="/" style="color: inherit; text-decoration: none"><span>♔</span> The Ainlay Chess Club</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/news">News</a>
+                <a href="/team">Team</a>
+                <a href="/league" class="active-link active">League</a>
+                <a href="/#join" class="btn-outline">Request Invitation</a>
+            </nav>
+        </header>
+
+        <!-- League Hero Section -->
+        <section class="about-hero">
+            <span class="sub-title">EST. 2026 — THE BATTLEGROUND</span>
+            <h1>The League Standings</h1>
+            <p class="about-intro">
+                Founded in 2026 as a sanctuary for strategic minds, the Harry Ainlay Chess Club has evolved into an
+                inter-school arena uniting chess clubs across EPSB. From local tactical showdowns to monthly fixtures
+                featuring elite rivals like Old Scona Academic, we are building a premiere scholastic league where every
+                move shapes the board.
+            </p>
+        </section>
+
+        <!-- The League Standings Table -->
+        <section id="league" class="league-section" style="padding-top: 2rem">
+            <div class="table-container">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Grand Master Name</th>
+                            <th>School</th>
+                            <th>Wins</th>
+                            <th>Draws</th>
+                            <th>Losses</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-1 ainlay-row">
+                            <td><span class="rank-badge">01</span></td>
+                            <td>The Endgame Heir</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>34</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="amber-text">107</td>
+                        </tr>
+                        <tr class="rank-2 osa-row">
+                            <td><span class="rank-badge">02</span></td>
+                            <td>OSA Wraith</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>29</td>
+                            <td>6</td>
+                            <td>5</td>
+                            <td class="amber-text">91</td>
+                        </tr>
+                        <tr class="rank-3 ainlay-row">
+                            <td><span class="rank-badge">03</span></td>
+                            <td>Ainlay Colossus</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>25</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td class="amber-text">83</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">04</span></td>
+                            <td>Crown Architect</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>21</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td class="amber-text">73</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">05</span></td>
+                            <td>Opening Theorist</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>19</td>
+                            <td>11</td>
+                            <td>10</td>
+                            <td class="amber-text">68</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">06</span></td>
+                            <td>Rook Cookie</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>15</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td class="amber-text">57</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">07</span></td>
+                            <td>Knight Rider</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>12</td>
+                            <td>10</td>
+                            <td>18</td>
+                            <td class="amber-text">46</td>
+                        </tr>
+
+                        <tr class="open-row">
+                            <td><span class="rank-badge">--</span></td>
+                            <td colspan="6" class="amber-text">
+                                This could be you 🫵
+                                <a href="/#join" style="color: inherit; text-decoration: underline; margin-left: 10px"
+                                    >Join the League &rarr;</a
+                                >
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Closing Call to Action Section  -->
+        <section class="closing-section">
+            <h2>“The board is set. The pieces are moving.”</h2>
+            <p class="closing-meta">Find us in The Library, Thursdays at 3:15 PM.</p>
+            <a href="/" class="btn-solid">Return to the Arena</a>
+        </section>
+    </body>
+</html>
