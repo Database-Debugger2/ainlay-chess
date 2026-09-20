@@ -1,3 +1,20 @@
+/* 0. STRICT NO-HORIZONTAL-SCROLL SAFEGUARD */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* 1. ROOT VARIABLES & THEME SETUP */
 :root {
     --bg-deep: #090706;
@@ -78,6 +95,7 @@ a:hover {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--bronze-border);
+    width: 100%;
 }
 
 .logo {
@@ -101,14 +119,14 @@ a:hover {
 
 .nav-links a {
     color: var(--text-muted);
-    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.5s ease;
 }
 
 .nav-links a:hover,
-.active-link {
+.active-link,
+.nav-links a.active {
     color: var(--amber-glow) !important;
 }
 
@@ -131,7 +149,6 @@ a:hover {
     background: linear-gradient(135deg, var(--amber-primary), #b86b1d);
     color: var(--bg-deep);
     padding: 0.9rem 2.2rem;
-    text-decoration: none;
     font-weight: 600;
     display: inline-block;
     border-radius: 4px;
@@ -159,13 +176,14 @@ a:hover {
     background-size: cover;
     background-position: center;
     filter: brightness(1.25);
+    width: 100%;
 }
 
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(9, 7, 6, 0.88) 35%, rgba(9, 7, 6, 0.60) 100%),
+        linear-gradient(90deg, rgba(9, 7, 6, 0.88) 35%, rgba(9, 7, 6, 0.6) 100%),
         radial-gradient(circle at 75% 40%, rgba(217, 130, 43, 0.22) 0%, transparent 65%);
     z-index: 1;
 }
@@ -210,7 +228,7 @@ a:hover {
 }
 
 .sidebar-header {
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 0.15em;
     color: var(--text-muted);
     border-bottom: 1px solid var(--bronze-border);
@@ -239,6 +257,7 @@ a:hover {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
     background: radial-gradient(circle at 15% 15%, rgba(217, 130, 43, 0.03) 0%, transparent 50%);
+    width: 100%;
 }
 
 .leadership-section h2,
@@ -295,56 +314,16 @@ a:hover {
     transition: filter 0.3s ease;
 }
 
-.card-notice-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(9, 7, 6, 0.92);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1.5rem;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.25rem;
-    letter-spacing: 0.15em;
-    color: var(--amber-glow);
-    border: 1px dashed var(--amber-primary);
-    border-radius: 4px;
-    z-index: 2;
-}
-
-.team-card {
-    position: relative;
-}
-
-.quote-text {
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 0.7rem;
-    line-height: 1.3;
-    max-width: 55%;
-    white-space: normal;
-    overflow: visible;
-}
-
-.team-footer-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-top: 1px solid var(--bronze-border);
-    padding-top: 0.8rem;
-    font-size: 0.75rem;
-    margin-top: auto;
-}
-
 .card-img-thanesh,
 .team-img-thanesh {
     background-image: url("../Images/thanesh.jpg");
 }
+
 .card-img-ashley,
 .team-img-ashley {
     background-image: url("");
 }
+
 .card-img-aryan,
 .team-img-aryan {
     background-image: url("../Images/aryan.jpg");
@@ -366,10 +345,29 @@ a:hover {
     color: var(--text-muted);
 }
 
+.card-notice-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 7, 6, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    color: var(--amber-glow);
+    border: 1px dashed var(--amber-primary);
+    border-radius: 4px;
+    z-index: 2;
+}
+
 /* 6. HOME PAGE: LEAGUE & STANDINGS TABLE */
 .league-section {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
+    width: 100%;
 }
 
 .league-header {
@@ -405,8 +403,10 @@ a:hover {
     background: var(--bg-card);
     border: 1px solid var(--bronze-border);
     border-radius: 8px;
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     backdrop-filter: blur(12px);
+    width: 100%;
 }
 
 .standings-table {
@@ -444,6 +444,41 @@ a:hover {
 .rank-badge {
     color: var(--amber-primary);
     font-weight: 600;
+    font-size: 18px;
+}
+
+.standings-table tr.rank-1 {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, rgba(26, 21, 14, 0.4) 100%) !important;
+} /* Gold gradient for 1st place */
+
+.standings-table tr.rank-2 {
+    background: linear-gradient(90deg, rgba(192, 192, 192, 0.12) 0%, rgba(26, 21, 14, 0.4) 100%) !important;
+} /* Silver gradient for 2nd place */
+
+.standings-table tr.rank-3 {
+    background: linear-gradient(90deg, rgba(205, 127, 50, 0.15) 0%, rgba(26, 21, 14, 0.4) 100%) !important;
+} /* Bronze gradient for 3rd place */
+
+.standings-table tr.rank-1 .rank-badge {
+    color: #d6af36 !important; /* Gold color for 1st place */
+}
+
+.standings-table tr.rank-2 .rank-badge {
+    color: #a7a7ad !important; /* Silver color for 2nd place */
+}
+
+.standings-table tr.rank-3 .rank-badge {
+    color: #996f49 !important; /* Bronze color for 3rd place */
+}
+
+.standings-table tr.ainlay-row .school-tag {
+    color: #4a90e2; /* Ainlay Blue */
+    font-weight: 500;
+}
+
+.standings-table tr.osa-row .school-tag {
+    color: #008a00; /* OSA Green */
+    font-weight: 500;
 }
 
 .open-row {
@@ -454,7 +489,7 @@ a:hover {
 }
 
 .open-row:hover {
-    background: rgba(217, 130, 43, 0.08) !important;
+    background: rgba(217, 130, 43, 0.11) !important;
 }
 
 /* 7. HOME PAGE: JOIN SECTION & FOOTER META */
@@ -465,6 +500,7 @@ a:hover {
     gap: 4rem;
     align-items: center;
     background: radial-gradient(circle at 85% 85%, rgba(217, 130, 43, 0.04) 0%, transparent 50%);
+    width: 100%;
 }
 
 .join-content h2 {
@@ -514,6 +550,7 @@ a:hover {
     padding: 7rem 5% 4rem 5%;
     border-bottom: 1px solid var(--bronze-border);
     max-width: 900px;
+    width: 100%;
 }
 
 .about-hero h1 {
@@ -533,6 +570,7 @@ a:hover {
 .mission-section {
     padding: 6rem 5%;
     border-bottom: 1px solid var(--bronze-border);
+    width: 100%;
 }
 
 .mission-grid {
@@ -563,6 +601,7 @@ a:hover {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
     text-align: center;
+    width: 100%;
 }
 
 .pillars-section .sub-title {
@@ -618,6 +657,7 @@ a:hover {
     align-items: center;
     gap: 1.5rem;
     background: radial-gradient(circle at 50% 50%, rgba(217, 130, 43, 0.05) 0%, transparent 60%);
+    width: 100%;
 }
 
 .closing-section h2 {
@@ -637,6 +677,7 @@ a:hover {
 .team-hero {
     padding: 6rem 5% 3rem 5%;
     max-width: 900px;
+    width: 100%;
 }
 
 .team-hero h1 {
@@ -656,6 +697,7 @@ a:hover {
 
 .team-grid-section {
     padding: 3rem 5% 8rem 5%;
+    width: 100%;
 }
 
 .team-grid {
@@ -665,6 +707,7 @@ a:hover {
 }
 
 .team-card {
+    position: relative;
     background-color: var(--bg-card);
     backdrop-filter: blur(12px);
     border: 1px solid var(--bronze-border);
@@ -714,19 +757,21 @@ a:hover {
 .team-footer-meta {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     border-top: 1px solid var(--bronze-border);
     padding-top: 0.8rem;
     font-size: 0.75rem;
+    margin-top: auto;
 }
 
 .quote-text {
     color: var(--text-muted);
     font-style: italic;
-    max-width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    max-width: 55%;
+    white-space: normal;
+    overflow: visible;
 }
 
 .contact-link {
@@ -741,7 +786,6 @@ a:hover {
     color: var(--amber-glow);
 }
 
-/* Open Team Card Styling & Animation */
 .open-team-card {
     border: 1px dashed var(--amber-primary);
     background: radial-gradient(circle at 50% 50%, rgba(217, 130, 43, 0.05) 0%, transparent 80%);
@@ -766,77 +810,12 @@ a:hover {
     }
 }
 
-/* 10. RESPONSIVE MEDIA QUERIES */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .hero,
-    .join-section,
-    .mission-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .hero h1,
-    .about-hero h1,
-    .team-hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero-sub-title {
-        font-size: 3.2rem;
-    }
-
-    .closing-section h2 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 700px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.custom-video-container {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--bronze-border);
-    border-radius: 4px;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.video-cover-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(9, 7, 6, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--amber-glow);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    z-index: 2;
-}
-
-/* 11. CLUB NEWS SECTION STYLES */
+/* 10. CLUB NEWS SECTION & MEDIA ELEMENTS */
 .news-section {
     max-width: 800px;
     margin: 3rem auto;
     padding: 0 5%;
+    width: 100%;
 }
 
 .news-item {
@@ -845,14 +824,6 @@ a:hover {
     gap: 1rem;
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--bronze-border);
-}
-
-@media (min-width: 768px) {
-    .news-item {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 3.5rem;
-    }
 }
 
 .news-meta {
@@ -888,4 +859,137 @@ a:hover {
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-muted);
+}
+
+.custom-video-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--bronze-border);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.video-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 7, 6, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber-glow);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    z-index: 2;
+}
+
+/* 11. RESPONSIVE MEDIA QUERIES FOR ALL DEVICES */
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .hero-sub-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .join-section,
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero h1,
+    .about-hero h1,
+    .team-hero h1 {
+        font-size: 3.2rem;
+    }
+    .hero-sub-title {
+        font-size: 2.8rem;
+    }
+    .closing-section h2 {
+        font-size: 2.2rem;
+    }
+    .league-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .news-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem 4%;
+        text-align: center;
+    }
+    .logo {
+        white-space: normal;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+    .standings-table th,
+    .standings-table td {
+        padding: 1rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero-sub-title {
+        font-size: 2.2rem;
+    }
+    .hero,
+    .leadership-section,
+    .league-section,
+    .join-section,
+    .about-hero,
+    .mission-section,
+    .pillars-section,
+    .team-hero,
+    .team-grid-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .btn-solid {
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
 }
