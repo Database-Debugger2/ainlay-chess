@@ -1,28 +1,31 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Meta Information -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Harry Ainlay Chess Club | Ainlay Chess</title>
+
+        <!-- SEO & Open Graph Meta Tags -->
         <meta
             name="description"
             content="Step into the arena at The Ainlay Chess Club || The Harry Ainlay Chess Club. View live league standings, meet our leadership council, and join us every Thursday after school 3:15-4:15 in the library @ Harry Ainlay High School."
         />
-        <link rel="stylesheet" href="CSS/style.css" />
-        <link rel="icon" type="image/png" href="Images/favicon.png" />
-        <meta property="og:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
         <meta
             property="og:description"
             content="Step into the board at The Ainlay Chess Club. View live league standings, and join us every Thursday after school 3:15-4:15 in the library."
         />
+        <meta property="og:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta name="google-site-verification" content="iSYLplXVBavn5GoDQEmi91O7fH8G3z6XSumjKIxFPuk" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="Images/favicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
             rel="stylesheet"
-        />
-        <meta name="google-site-verification" content="iSYLplXVBavn5GoDQEmi91O7fH8G3z6XSumjKIxFPuk" />
-        <meta
-            name="keywords"
-            content="Ainlay Chess Club, Harry Ainlay, high school chess club, Edmonton chess, Harry Ainlay Chess Club, Harry Ainlay clubs, HA Clubs, HA Chess Club"
         />
     </head>
     <body>
@@ -30,10 +33,11 @@
         <header class="site-header">
             <div class="logo"><span>♔</span> The Ainlay Chess Club</div>
             <nav class="nav-links">
+                <a href="/" class="active-link active">Home</a>
                 <a href="/about">About</a>
                 <a href="/news">News</a>
                 <a href="/team">Team</a>
-                <a href="#league">League</a>
+                <a href="/league">League</a>
                 <a href="#join" class="btn-outline">Request Invitation</a>
             </nav>
         </header>
@@ -52,10 +56,17 @@
             <div class="hero-sidebar">
                 <div class="sidebar-header">LIVE STANDINGS</div>
                 <div class="sidebar-item">
-                    <span>01. Trying to get up here ?</span> <span class="amber-text">18</span>
+                    <span><span style="color: #d6af36">01.</span>&ensp;Trying to get up here ?</span>
+                    <span class="amber-text">107</span>
                 </div>
-                <div class="sidebar-item"><span>02. It is possible</span> <span class="amber-text">14</span></div>
-                <div class="sidebar-item"><span>03. Join the club </span> <span class="amber-text">12</span></div>
+                <div class="sidebar-item">
+                    <span><span style="color: #a7a7ad">02.</span>&ensp;It is possible</span>
+                    <span class="amber-text">91</span>
+                </div>
+                <div class="sidebar-item">
+                    <span><span style="color: #996f49">03.</span>&ensp;Join the club </span>
+                    <span class="amber-text">83</span>
+                </div>
                 <div class="sidebar-link"><a href="#league" class="no-deco">FULL STANDINGS -</a></div>
             </div>
         </section>
@@ -74,7 +85,7 @@
                 </a>
                 <a href="/team#ashley">
                     <div class="card no-deco">
-                        <div class="card-img-ashley placeholder-2" style="position: relative;">
+                        <div class="card-img-ashley placeholder-2" style="position: relative">
                             <div class="card-notice-overlay">
                                 <span>RESERVED FOR THURSDAY ATTENDEES</span>
                             </div>
@@ -106,53 +117,84 @@
                     <thead>
                         <tr>
                             <th>Rank</th>
-                            <th>Player Name</th>
+                            <th>Grand Master Name</th>
+                            <th>School</th>
                             <th>Wins</th>
+                            <th>Draws</th>
                             <th>Losses</th>
                             <th>Points</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="rank-1 ainlay-row">
                             <td><span class="rank-badge">01</span></td>
-                            <td>Trying to get up here ?</td>
+                            <td>The Endgame Heir</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
                             <td>34</td>
-                            <td>4</td>
-                            <td class="amber-text">104</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td class="amber-text">107</td>
                         </tr>
-                        <tr>
+                        <tr class="rank-2 osa-row">
                             <td><span class="rank-badge">02</span></td>
-                            <td>THIS COULD BE YOU!</td>
+                            <td>The Scona Phantom</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
                             <td>29</td>
-                            <td>7</td>
+                            <td>6</td>
+                            <td>5</td>
                             <td class="amber-text">91</td>
                         </tr>
-                        <tr>
+                        <tr class="rank-3 osa-row">
                             <td><span class="rank-badge">03</span></td>
-                            <td>You ?</td>
+                            <td>The Scona Phantom</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
                             <td>25</td>
-                            <td>10</td>
-                            <td class="amber-text">82</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td class="amber-text">83</td>
                         </tr>
-                        <tr>
+                        <tr class="osa-row">
                             <td><span class="rank-badge">04</span></td>
-                            <td>Join the club and play</td>
+                            <td>Crown Architect</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
                             <td>21</td>
-                            <td>12</td>
-                            <td class="amber-text">75</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td class="amber-text">73</td>
                         </tr>
-                        <tr>
+                        <tr class="ainlay-row">
                             <td><span class="rank-badge">05</span></td>
-                            <td>It is possible</td>
+                            <td>Opening Theorist</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
                             <td>19</td>
-                            <td>14</td>
+                            <td>11</td>
+                            <td>10</td>
                             <td class="amber-text">68</td>
                         </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">06</span></td>
+                            <td>Rook Cookie</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>15</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td class="amber-text">57</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">07</span></td>
+                            <td>Knight Rider</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>12</td>
+                            <td>10</td>
+                            <td>18</td>
+                            <td class="amber-text">46</td>
+                        </tr>
+
                         <tr class="open-row">
                             <td><span class="rank-badge">--</span></td>
-                            <td colspan="4" class="amber-text">
+                            <td colspan="6" class="amber-text">
                                 This could be you 🫵
-                                <a href="#join" style="color: inherit; text-decoration: underline; margin-left: 10px"
+                                <a href="/#join" style="color: inherit; text-decoration: underline; margin-left: 10px"
                                     >Join the League &rarr;</a
                                 >
                             </td>
