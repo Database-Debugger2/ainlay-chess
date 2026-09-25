@@ -481,8 +481,8 @@ a:hover {
     font-weight: 500;
 }
 
-.standings-table tr.lilian-row .school-tag {
-    color: #FF4D6D; /* Lilian Red */
+.standings-table tr.lillian-row .school-tag {
+    color: #C41E3A; /* Lilian Red */
     font-weight: 500;
 }
 
