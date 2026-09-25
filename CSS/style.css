@@ -472,12 +472,17 @@ a:hover {
 }
 
 .standings-table tr.ainlay-row .school-tag {
-    color: #4a90e2; /* Ainlay Blue */
+    color: #4f83cc; /* Ainlay Blue */
     font-weight: 500;
 }
 
 .standings-table tr.osa-row .school-tag {
     color: #008a00; /* OSA Green */
+    font-weight: 500;
+}
+
+.standings-table tr.lilian-row .school-tag {
+    color: #FF4D6D; /* Lilian Red */
     font-weight: 500;
 }
 
