@@ -13,7 +13,7 @@
         <loc>https://ainlay-chess.vercel.app/team</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.4</priority>
     </url>
 
     <!-- About Page -->
@@ -21,7 +21,7 @@
         <loc>https://ainlay-chess.vercel.app/about</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 
     <!-- News Page -->
@@ -29,7 +29,7 @@
         <loc>https://ainlay-chess.vercel.app/news</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
+        <priority>0.6</priority>
     </url>
 
     <!-- League Page -->
@@ -37,6 +37,14 @@
         <loc>https://ainlay-chess.vercel.app/league</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Match Records Page -->
+    <url>
+        <loc>https://ainlay-chess.vercel.app/records</loc>
+        <lastmod>2026-09-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 </urlset>
