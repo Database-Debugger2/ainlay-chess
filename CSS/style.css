@@ -1,4 +1,6 @@
-/* 0. STRICT NO-HORIZONTAL-SCROLL SAFEGUARD */
+/* ==========================================
+   0. STRICT NO-HORIZONTAL-SCROLL SAFEGUARD
+   ========================================== */
 html,
 body {
     width: 100%;
@@ -15,7 +17,9 @@ svg {
     height: auto;
 }
 
-/* 1. ROOT VARIABLES & THEME SETUP */
+/* ==========================================
+   1. ROOT VARIABLES & THEME SETUP
+   ========================================== */
 :root {
     --bg-deep: #090706;
     --bg-card: rgba(23, 17, 14, 0.7);
@@ -29,7 +33,9 @@ svg {
     --text-muted: #9e8c7c;
 }
 
-/* 2. GLOBAL RESET & BASE STYLES */
+/* ==========================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -82,7 +88,9 @@ a:hover {
     font-weight: 600;
 }
 
-/* 3. NAVIGATION HEADER */
+/* ==========================================
+   3. NAVIGATION HEADER
+   ========================================== */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -163,7 +171,9 @@ a:hover {
     color: white;
 }
 
-/* 4. HOME PAGE: HERO SECTION */
+/* ==========================================
+   4. HOME PAGE: HERO SECTION
+   ========================================== */
 .hero {
     position: relative;
     display: grid;
@@ -252,7 +262,9 @@ a:hover {
     cursor: pointer;
 }
 
-/* 5. HOME PAGE: LEADERSHIP & CARDS */
+/* ==========================================
+   5. HOME PAGE: LEADERSHIP & CARDS
+   ========================================== */
 .leadership-section {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
@@ -363,7 +375,9 @@ a:hover {
     z-index: 2;
 }
 
-/* 6. HOME PAGE: LEAGUE & STANDINGS TABLE */
+/* ==========================================
+   6. HOME PAGE & LEAGUE: STANDINGS TABLE
+   ========================================== */
 .league-section {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
@@ -497,7 +511,98 @@ a:hover {
     background: rgba(217, 130, 43, 0.11) !important;
 }
 
-/* 7. HOME PAGE: JOIN SECTION & FOOTER META */
+/* ==========================================
+   6b. HOW THE GRID WORKS SECTION
+   ========================================== */
+.grid-rules-section {
+    padding: 4rem 5% 2rem 5%;
+    border-bottom: 1px solid var(--bronze-border);
+    width: 100%;
+}
+
+.rules-header {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.rules-header h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--parchment);
+    margin-bottom: 0.8rem;
+}
+
+.rules-intro {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.rule-card {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--bronze-border);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rule-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--amber-primary);
+    box-shadow:
+        0 16px 30px rgba(0, 0, 0, 0.6),
+        0 0 20px var(--amber-dim);
+}
+
+.rule-icon {
+    font-size: 2rem;
+    color: var(--amber-glow);
+    margin-bottom: 1rem;
+}
+
+.rule-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--parchment);
+    margin-bottom: 1rem;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.rule-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.rule-list li {
+    font-size: 0.95rem;
+    color: var(--parchment);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(77, 56, 42, 0.3);
+}
+
+.rule-list li strong {
+    color: var(--amber-glow);
+}
+
+.rule-subtext {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 0.8rem;
+}
+
+/* ==========================================
+   7. HOME PAGE: JOIN SECTION & FOOTER META
+   ========================================== */
 .join-section {
     padding: 7rem 5%;
     display: grid;
@@ -550,7 +655,9 @@ a:hover {
     font-size: 0.95rem;
 }
 
-/* 8. ABOUT PAGE STYLES */
+/* ==========================================
+   8. ABOUT PAGE STYLES
+   ========================================== */
 .about-hero {
     padding: 7rem 5% 4rem 5%;
     border-bottom: 1px solid var(--bronze-border);
@@ -678,7 +785,9 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-/* 9. TEAM PAGE STYLES */
+/* ==========================================
+   9. TEAM PAGE STYLES
+   ========================================== */
 .team-hero {
     padding: 6rem 5% 3rem 5%;
     max-width: 900px;
@@ -815,7 +924,9 @@ a:hover {
     }
 }
 
-/* 10. CLUB NEWS SECTION & MEDIA ELEMENTS */
+/* ==========================================
+   10. CLUB NEWS SECTION & MEDIA ELEMENTS
+   ========================================== */
 .news-section {
     max-width: 800px;
     margin: 3rem auto;
@@ -896,8 +1007,9 @@ a:hover {
     z-index: 2;
 }
 
-/* 11. RESPONSIVE MEDIA QUERIES FOR ALL DEVICES */
-
+/* ==========================================
+   11. RESPONSIVE MEDIA QUERIES
+   ========================================== */
 @media (max-width: 1024px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -983,6 +1095,7 @@ a:hover {
     .hero,
     .leadership-section,
     .league-section,
+    .grid-rules-section,
     .join-section,
     .about-hero,
     .mission-section,
