@@ -207,6 +207,15 @@ a:hover {
     color: white;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Filter Dropdowns */
 .sort-select {
     background: rgba(9, 7, 6, 0.8);
