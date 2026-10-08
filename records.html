@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Match Records - The Ainlay Chess Club</title>
+        <link rel="icon" type="image/png" href="Images/favicon.png" />
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="logo">
+                <a href="/"><span>♔</span> The Ainlay Chess Club</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/news">News</a>
+                <a href="/team">Team</a>
+                <a href="/league">The Grid</a>
+                <a href="/records" class="active-link active">Records</a>
+                <a href="#join" class="btn-outline">Request Invitation</a>
+            </nav>
+        </header>
+
+        <section class="about-hero">
+            <span class="sub-title">HISTORICAL ARCHIVES</span>
+            <h1>Match Records</h1>
+            <p class="about-intro">
+                Review key games from monthly fixtures across Harry Ainlay, Strathcona, Old Scona Academic, and Lillian
+                Osborne.
+            </p>
+        </section>
+
+        <section id="match-records" class="records-section-padding">
+            <!-- Filter Bar -->
+            <div class="records-filter-bar">
+                <div class="filter-group">
+                    <label for="sort-select">Sort By:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="recent">Most Recent</option>
+                        <option value="round">Tournament Number</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label id="school-filter-label">School:</label>
+                    <div
+                        class="custom-select"
+                        id="school-filter"
+                        role="combobox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-labelledby="school-filter-label"
+                        tabindex="0"
+                    >
+                        <div class="selected-option" data-value="all">All Schools</div>
+                        <div class="options-list" role="listbox">
+                            <div class="option" role="option" aria-selected="true" data-value="all">All Schools</div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="ainlay"
+                                style="--tag-color: var(--school-ainlay)"
+                            >
+                                Harry Ainlay
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="osa"
+                                style="--tag-color: var(--school-osa)"
+                            >
+                                OSA
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="lillian"
+                                style="--tag-color: var(--school-lillian)"
+                            >
+                                Lillian Osborne
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="strathcona"
+                                style="--tag-color: var(--school-strathcona)"
+                            >
+                                Strathcona
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="records-grid" id="records-container">
+                <!-- Card 1 -->
+                <div class="record-card" data-round="3" data-schools="ainlay strathcona" data-date="2026-03-01">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 1</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 3 • Board 1</span>
+                        <span class="record-outcome">1 - 0</span>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">Alexander Vance</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                            <span class="elo-tag"><span class="elo-highlight">+16</span> ELO</span>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">Chen Wei</span>
+                                <span class="school-tag school-strathcona">(Strathcona)</span>
+                            </div>
+                            <span class="elo-tag">-16 ELO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="record-card" data-round="2" data-schools="lillian ainlay" data-date="2026-02-15">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 3</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 2 • Board 3</span>
+                        <span class="record-outcome">½ - ½</span>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">Marcus Brody</span>
+                                <span class="school-tag school-lillian">(Lillian)</span>
+                            </div>
+                            <span class="elo-tag"><span class="elo-highlight">+1</span> ELO</span>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">Thanesh Sharma</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                            <span class="elo-tag">-1 ELO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="record-card" data-round="1" data-schools="osa ainlay" data-date="2026-01-20">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 2</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 1 • Board 2</span>
+                        <span class="record-outcome">0 - 1</span>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">David Lin</span>
+                                <span class="school-tag school-osa">(OSA)</span>
+                            </div>
+                            <span class="elo-tag">-22 ELO</span>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">Aryan Patel</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                            <span class="elo-tag"><span class="elo-highlight">+22</span> ELO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sorting, Accessible Dropdown, & Keyboard Navigation Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const sortSelect = document.getElementById("sort-select");
+                const customSelect = document.getElementById("school-filter");
+                const selectedOption = customSelect.querySelector(".selected-option");
+                const options = customSelect.querySelectorAll(".option");
+                const container = document.getElementById("records-container");
+
+                function filterAndSort() {
+                    const cards = Array.from(container.querySelectorAll(".record-card"));
+                    const selectedSchool = selectedOption.dataset.value || "all";
+                    const sortBy = sortSelect.value;
+
+                    // 1. Filter
+                    cards.forEach(card => {
+                        const schools = card.dataset.schools ? card.dataset.schools.split(" ") : [];
+                        if (selectedSchool === "all" || schools.includes(selectedSchool)) {
+                            card.style.display = "grid";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    // 2. Sort
+                    cards.sort((a, b) => {
+                        if (sortBy === "recent") {
+                            return new Date(b.dataset.date) - new Date(a.dataset.date);
+                        } else if (sortBy === "round") {
+                            return parseInt(b.dataset.round, 10) - parseInt(a.dataset.round, 10);
+                        }
+                        return 0;
+                    });
+
+                    // Re-append sorted elements
+                    cards.forEach(card => container.appendChild(card));
+                }
+
+                function toggleDropdown(state) {
+                    const isOpen = state !== undefined ? state : !customSelect.classList.contains("open");
+                    customSelect.classList.toggle("open", isOpen);
+                    customSelect.setAttribute("aria-expanded", isOpen);
+                }
+
+                function selectOption(option) {
+                    const text = option.textContent.trim();
+                    const value = option.dataset.value;
+                    const tagColor = option.style.getPropertyValue("--tag-color");
+
+                    selectedOption.textContent = text;
+                    selectedOption.style.color = tagColor || "inherit";
+                    selectedOption.dataset.value = value;
+
+                    options.forEach(opt => {
+                        const isSelected = opt === option;
+                        opt.setAttribute("aria-selected", isSelected);
+                    });
+
+                    toggleDropdown(false);
+                    filterAndSort();
+                }
+
+                // Click handler for toggle
+                selectedOption.addEventListener("click", () => toggleDropdown());
+
+                // Click handlers for options
+                options.forEach(option => {
+                    option.addEventListener("click", () => selectOption(option));
+                });
+
+                // Keyboard Navigation for custom select
+                customSelect.addEventListener("keydown", e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        toggleDropdown();
+                    } else if (e.key === "Escape") {
+                        toggleDropdown(false);
+                    }
+                });
+
+                // Native select listener
+                sortSelect.addEventListener("change", filterAndSort);
+
+                // Close on click outside
+                document.addEventListener("click", e => {
+                    if (!customSelect.contains(e.target)) {
+                        toggleDropdown(false);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
