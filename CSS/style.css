@@ -208,12 +208,12 @@ a:hover {
 }
 
 .button-group {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Filter Dropdowns */
@@ -775,7 +775,7 @@ a:hover {
     }
 }
 
-/* 6. STANDINGS & TABLES */
+/* 6. STANDINGS & TABLES (League, The Grid)*/
 .league-section {
     padding: 7rem 5%;
     border-bottom: 1px solid var(--bronze-border);
@@ -923,6 +923,23 @@ a:hover {
     background: rgba(217, 130, 43, 0.11) !important;
 }
 
+.closing-meta-muted {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.closing-meta-muted a {
+    color: #ffffff !important;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.closing-meta-muted a:hover {
+    color: var(--amber-glow) !important;
+}
+
 /* 7. MATCH RECORDS MODULE */
 .records-section-padding {
     padding: 5rem 5%;
@@ -947,6 +964,37 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+}
+
+.search-filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.records-search-input {
+    background: rgba(9, 7, 6, 0.8);
+    border: 1px solid var(--bronze-border);
+    color: var(--parchment);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-family: inherit;
+    width: 100%;
+    transition: var(--transition-fast);
+}
+
+.records-search-input:focus,
+.records-search-input:hover {
+    border-color: var(--amber-primary);
+    outline: none;
+}
+
+.no-results-message {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 3rem 0;
+    grid-column: 1 / -1;
 }
 
 .filter-group label {
@@ -1128,6 +1176,13 @@ a:hover {
 }
 
 .game-protocol-info span {
+    white-space: nowrap;
+}
+
+.record-meta-wrap {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
     white-space: nowrap;
 }
 
