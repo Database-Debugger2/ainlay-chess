@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta Information -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Primary Meta Tags -->
+        <title>Club News - The Ainlay Chess Club</title>
+        <meta name="title" content="Club News & Announcements | The Ainlay Chess Club" />
+        <meta
+            name="description"
+            content="Stay updated with The Ainlay Chess Club. Get the latest tournament announcements, upcoming challenges, and The Grid news."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ainlay-chess.vercel.app/news" />
+        <meta property="og:title" content="Club News & Announcements | The Ainlay Chess Club" />
+        <meta
+            property="og:description"
+            content="Stay updated with The Ainlay Chess Club. Get the latest tournament announcements, upcoming challenges, and The Grid news."
+        />
+        <meta property="og:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta property="og:image:alt" content="The Ainlay Chess Club Logo" />
+        <meta property="og:site_name" content="The Ainlay Chess Club" />
+        <meta property="og:locale" content="en_CA" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://ainlay-chess.vercel.app/news" />
+        <meta name="twitter:title" content="Club News & Announcements | The Ainlay Chess Club" />
+        <meta
+            name="twitter:description"
+            content="Stay updated with The Ainlay Chess Club. Get the latest tournament announcements, upcoming challenges, and The Grid news."
+        />
+        <meta name="twitter:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta name="twitter:image:alt" content="The Ainlay Chess Club Logo" />
+
+        <!-- Stylesheets & Fonts -->
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header / Navigation -->
+        <header class="site-header">
+            <div class="logo">
+                <a href="/" style="color: inherit; text-decoration: none"><span>♔</span> Back to Arena</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/news" class="active-link active">News</a>
+                <a href="/team">Team</a>
+                <a href="/league">The Grid</a>
+                <a href="/records">Match Records</a>
+                <a href="/#join" class="btn-outline">Request Invitation</a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main style="padding: 5rem 5%; max-width: 800px; margin: 0 auto">
+            <article class="card" style="padding: 2rem">
+                <!-- Message text -->
+                <p class="team-bio" style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 1.5rem">
+                    "Make sure to review this demo game before guess the elo challenge next week."
+                </p>
+
+                <!-- Video container -->
+                <div class="custom-video-container" onclick="playRickroll(this)">
+                    <div class="video-cover-overlay">
+                        <span>▶ Click to watch video</span>
+                    </div>
+                    <div class="video-frame-wrapper"></div>
+                </div>
+            </article>
+        </main>
+
+        <script>
+            function playRickroll(container) {
+                const wrapper = container.querySelector(".video-frame-wrapper");
+                wrapper.innerHTML = `
+                    <iframe width="100%" height="315" 
+                        src="https://www.youtube.com/embed/QDia3e12czc?autoplay=1&end=7" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+                container.querySelector(".video-cover-overlay").style.display = "none";
+            }
+        </script>
+
+        <!-- News Section -->
+        <section class="news-section">
+            <article class="news-item">
+                <div class="news-meta">
+                    <span class="news-date">12.09.26</span>
+                    <span class="news-category">Announcement</span>
+                </div>
+                <!-- First Meeting Announcement -->
+                <div class="news-content">
+                    <h2>First Meeting — Come Join us!</h2>
+                    <p>
+                        The Ainlay Chess Club is inviting you to join us for our first meeting on Thursday September 17
+                        (17.09.2026)—we're looking forward to seeing you all there!
+                    </p>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-meta">
+                    <span class="news-date">26.09.26</span>
+                    <span class="news-category">Challenge Invite</span>
+                </div>
+                <!-- ELO Guessing Challenge Announcement -->
+                <div class="news-content">
+                    <h2>ELO Guessing Challenge — Come Join Us (No Experience Needed)!</h2>
+                    <p>
+                        The Ainlay Chess Club is inviting you to join us for our first challenge of this year — the ELO
+                        Guessing Challenge — on Thursday, October 1 (01.10.2026). We're looking forward to seeing you
+                        all there!
+                    </p>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-meta">
+                    <span class="news-date">12.10.26</span>
+                    <span class="news-category">The Grand Reveal</span>
+                </div>
+                <!-- The Grid Announcement -->
+                <div class="news-content">
+                    <h2>The Grid — Where Strategic minds meet!</h2>
+                    <p>
+                        The wait is finally over. We're introducing a groundbreaking tournament format designed to bring
+                        players and clubs together in a whole new way. This marks a first for high school chess—where
+                        every move counts toward an interconnected, season-wide standing.
+                        <a href="/league" style="text-decoration: underline; color: white">
+                            Check out the board, track your rank, and prepare for upcoming fixtures.</a
+                        >
+                    </p>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-meta">
+                    <span class="news-date">12.10.26</span>
+                    <span class="news-category">The Grid - Round 1</span>
+                </div>
+                <!-- The Grid Announcement -->
+                <div class="news-content">
+                    <h2>The Grid — Let the battle begin!</h2>
+                    <p>
+                        Round 1 is officially set! The battle begins on October 27, 2026, hosted at Old Scona Academic
+                        (10523 84 Ave NW). Prepare your openings, review the standings, and get ready to represent your
+                        school on the board.
+                        <strong>Registration closes on Friday October 23 at 11:59 PM!!</strong>
+                        <br />
+                        <a
+                            href="https://docs.google.com/document/d/18SxasUI1WTiPQIokx0CSsn8duzSBGV8PuGC_dOfJB1o/edit?usp=sharing"
+                            >View tournament details &rarr;</a
+                        >
+                    </p>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Meta Information -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>Match Records | The Grid</title>
+        <meta name="title" content="Match Records | The Grid" />
+        <meta
+            name="description"
+            content="Review chess match records from The Grid season, featuring key games from Harry Ainlay, Strathcona, Old Scona Academic, and Lillian Osborne."
+        />
+        <link rel="canonical" href="https://ainlay-chess.vercel.app/records" />
+
+        <!-- Open Graph / Facebook / Discord / Slack -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ainlay-chess.vercel.app/records" />
+        <meta property="og:title" content="Match Records & Archives | The Grid" />
+        <meta
+            property="og:description"
+            content="Review chess match records and game archives from The Grid season, featuring key games from Harry Ainlay, Strathcona, Old Scona Academic, and Lillian Osborne."
+        />
+        <meta property="og:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta property="og:image:alt" content="The Ainlay Chess Club Logo" />
+        <meta property="og:site_name" content="The Grid" />
+        <meta property="og:locale" content="en_CA" />
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://ainlay-chess.vercel.app/records" />
+        <meta name="twitter:title" content="Match Records & Archives | The Grid" />
+        <meta
+            name="twitter:description"
+            content="Review chess match records and game archives from The Grid season, featuring key games from Harry Ainlay, Strathcona, Old Scona Academic, and Lillian Osborne."
+        />
+        <meta name="twitter:image" content="https://ainlay-chess.vercel.app/Images/favicon.png" />
+        <meta name="twitter:image:alt" content="The Ainlay Chess Club Logo" />
+
+        <!-- Google Site Verification & Favicon -->
+        <meta name="google-site-verification" content="iSYLplXVBavn5GoDQEmi91O7fH8G3z6XSumjKIxFPuk" />
+        <link rel="icon" type="image/png" href="https://ainlay-chess.vercel.app/Images/favicon.png" />
+
+        <!-- Stylesheets & Fonts -->
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="logo">
+                <a href="/"><span>♔</span> The Ainlay Chess Club</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/news">News</a>
+                <a href="/team">Team</a>
+                <a href="/league">The Grid</a>
+                <a href="/records" class="active-link active">Records</a>
+                <a href="/#join" class="btn-outline">Request Invitation</a>
+            </nav>
+        </header>
+
+        <section class="about-hero">
+            <span class="sub-title">HISTORICAL ARCHIVES</span>
+            <h1>Match Records</h1>
+            <p class="about-intro">
+                Review key games from monthly fixtures across Harry Ainlay, Strathcona, Old Scona Academic, and Lillian
+                Osborne.
+            </p>
+        </section>
+
+        <section id="match-records" class="records-section-padding">
+            <!-- Filter Bar -->
+            <div class="records-filter-bar">
+                <!-- Search Bar -->
+                <div class="filter-group search-filter-group">
+                    <label for="record-search">Search:</label>
+                    <input
+                        type="text"
+                        id="record-search"
+                        class="records-search-input"
+                        placeholder="Search player, school, board..."
+                        aria-label="Search match records"
+                    />
+                </div>
+
+                <!-- Sort By Dropdown -->
+                <div class="filter-group">
+                    <label for="sort-select">Sort By:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="recent">Most Recent</option>
+                        <option value="round">Tournament Number</option>
+                    </select>
+                </div>
+
+                <!-- Custom Styled School Dropdown with Full Color Support -->
+                <div class="filter-group">
+                    <label id="school-filter-label">School:</label>
+                    <div
+                        class="custom-select"
+                        id="school-filter"
+                        role="combobox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-labelledby="school-filter-label"
+                        tabindex="0"
+                    >
+                        <div class="selected-option" data-value="all">All Schools</div>
+                        <div class="options-list" role="listbox">
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="true"
+                                data-value="all"
+                                style="color: var(--parchment)"
+                            >
+                                All Schools
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="ainlay"
+                                style="--tag-color: var(--school-ainlay); color: var(--school-ainlay)"
+                            >
+                                Harry Ainlay
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="osa"
+                                style="--tag-color: var(--school-osa); color: var(--school-osa)"
+                            >
+                                OSA
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="lillian"
+                                style="--tag-color: var(--school-lillian); color: var(--school-lillian)"
+                            >
+                                Lillian Osborne
+                            </div>
+                            <div
+                                class="option"
+                                role="option"
+                                aria-selected="false"
+                                data-value="strathcona"
+                                style="--tag-color: var(--school-strathcona); color: var(--school-strathcona)"
+                            >
+                                Strathcona
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="records-grid" id="records-container">
+                <!-- Card 1 -->
+                <div class="record-card" data-round="3" data-schools="ainlay strathcona" data-date="2026-10-10">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 1</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 3 • Board 1</span>
+                        <div class="record-meta-wrap">
+                            <span class="record-outcome">1 - 0</span>
+                            <span class="game-meta-detail">Oct 10, 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">Knight Rider</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">Opening Theorist</span>
+                                <span class="school-tag school-strathcona">(Strathcona)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="record-card" data-round="2" data-schools="lillian ainlay" data-date="2026-03-23">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 3</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 2 • Board 3</span>
+                        <div class="record-meta-wrap">
+                            <span class="record-outcome">½ - ½</span>
+                            <span class="game-meta-detail">Mar 23, 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">Midnight Gambiteer</span>
+                                <span class="school-tag school-lillian">(Lillian)</span>
+                            </div>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">The Endgame Heir</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="record-card" data-round="1" data-schools="osa ainlay" data-date="2027-01-20">
+                    <div class="endgame-board-slot">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♟</span>
+                            <span>Board 2</span>
+                        </div>
+                    </div>
+
+                    <div class="record-header">
+                        <span class="record-fixture">Tournament 1 • Board 2</span>
+                        <div class="record-meta-wrap">
+                            <span class="record-outcome">0 - 1</span>
+                            <span class="game-meta-detail">Jan 20, 2027</span>
+                        </div>
+                    </div>
+
+                    <div class="players-stack">
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-white">♔</span>
+                                <span class="player-name">OSA Wraith</span>
+                                <span class="school-tag school-osa">(OSA)</span>
+                            </div>
+                        </div>
+                        <div class="player-row">
+                            <div class="player-info">
+                                <span class="piece-icon piece-black">♚</span>
+                                <span class="player-name">The Endgame Heir</span>
+                                <span class="school-tag school-ainlay">(Ainlay)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="no-results-message" style="display: none">No matching games found.</div>
+        </section>
+
+        <!-- Search, Custom Select & Dynamic Filtering Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const searchInput = document.getElementById("record-search");
+                const sortSelect = document.getElementById("sort-select");
+                const customSelect = document.getElementById("school-filter");
+                const selectedOption = customSelect.querySelector(".selected-option");
+                const options = customSelect.querySelectorAll(".option");
+                const container = document.getElementById("records-container");
+                const noResults = document.getElementById("no-results");
+
+                function filterAndSort() {
+                    const cards = Array.from(container.querySelectorAll(".record-card"));
+                    const query = searchInput.value.toLowerCase().trim();
+                    const selectedSchool = selectedOption.dataset.value || "all";
+                    const sortBy = sortSelect.value;
+
+                    let visibleCount = 0;
+
+                    // 1. Filter by School and Search Text
+                    cards.forEach(card => {
+                        const schools = card.dataset.schools ? card.dataset.schools.split(" ") : [];
+                        const matchesSchool = selectedSchool === "all" || schools.includes(selectedSchool);
+
+                        const cardText = card.textContent.toLowerCase();
+                        const matchesSearch = query === "" || cardText.includes(query);
+
+                        if (matchesSchool && matchesSearch) {
+                            card.style.display = "grid";
+                            visibleCount++;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    // Show fallback message if no cards match search criteria
+                    noResults.style.display = visibleCount === 0 ? "block" : "none";
+
+                    // 2. Sorting Logic
+                    cards.sort((a, b) => {
+                        if (sortBy === "recent") {
+                            const dateA = new Date(a.dataset.date);
+                            const dateB = new Date(b.dataset.date);
+
+                            if (dateA.getTime() !== dateB.getTime()) {
+                                return dateB - dateA;
+                            }
+
+                            return parseInt(b.dataset.round, 10) - parseInt(a.dataset.round, 10);
+                        } else if (sortBy === "round") {
+                            return parseInt(b.dataset.round, 10) - parseInt(a.dataset.round, 10);
+                        }
+                        return 0;
+                    });
+
+                    // Re-append cards to maintain DOM order
+                    cards.forEach(card => container.appendChild(card));
+                }
+
+                function toggleDropdown(state) {
+                    const isOpen = state !== undefined ? state : !customSelect.classList.contains("open");
+                    customSelect.classList.toggle("open", isOpen);
+                    customSelect.setAttribute("aria-expanded", isOpen);
+                }
+
+                function selectOption(option) {
+                    const text = option.textContent.trim();
+                    const value = option.dataset.value;
+                    const tagColor = option.style.color || "inherit";
+
+                    selectedOption.textContent = text;
+                    selectedOption.style.color = tagColor;
+                    selectedOption.dataset.value = value;
+
+                    options.forEach(opt => {
+                        const isSelected = opt === option;
+                        opt.setAttribute("aria-selected", isSelected);
+                    });
+
+                    toggleDropdown(false);
+                    filterAndSort();
+                }
+
+                // Event Listeners
+                searchInput.addEventListener("input", filterAndSort);
+
+                selectedOption.addEventListener("click", () => toggleDropdown());
+
+                options.forEach(option => {
+                    option.addEventListener("click", () => selectOption(option));
+                });
+
+                customSelect.addEventListener("keydown", e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        toggleDropdown();
+                    } else if (e.key === "Escape") {
+                        toggleDropdown(false);
+                    }
+                });
+
+                sortSelect.addEventListener("change", filterAndSort);
+
+                document.addEventListener("click", e => {
+                    if (!customSelect.contains(e.target)) {
+                        toggleDropdown(false);
+                    }
+                });
+
+                filterAndSort();
+            });
+        </script>
+    </body>
+</html>
