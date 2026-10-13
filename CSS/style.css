@@ -1019,7 +1019,7 @@ a:hover {
     border-radius: var(--radius-lg);
     padding: 1rem 1.25rem;
     display: grid;
-    grid-template-columns: 80px 220px 1fr auto;
+    grid-template-columns: 80px 240px 1fr auto;
     align-items: center;
     gap: 1.5rem;
     transition: var(--transition-fast);
@@ -1086,7 +1086,7 @@ a:hover {
     border-right: 1px solid var(--bronze-border);
     padding-right: 1.5rem;
     height: 100%;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .record-fixture {
@@ -1095,12 +1095,14 @@ a:hover {
     font-weight: 600;
     color: var(--amber-glow);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .record-outcome {
     font-size: 0.85rem;
     color: var(--amber-glow);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .players-stack {
@@ -1474,11 +1476,14 @@ a:hover {
         border-right: none;
         padding-right: 0;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         grid-column: span 2;
         border-bottom: 1px solid var(--bronze-border);
         padding-bottom: 0.5rem;
+        min-width: auto;
     }
     .players-stack {
         grid-column: span 2;
