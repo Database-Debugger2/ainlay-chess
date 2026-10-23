@@ -920,7 +920,7 @@ a:hover {
 }
 
 .school-strathcona,
-.standings-table tr.strathcona-row .school-tag {
+.standings-table tr.ross-row .school-tag {
     color: var(--school-ross);
     font-weight: 500;
 }
