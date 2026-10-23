@@ -22,6 +22,7 @@
     --school-osa: #007902;
     --school-lillian: #d60000;
     --school-strathcona: #e66000;
+    --school-ross: #75b2dd;
 
     /* Rank Accent Colors */
     --rank-gold: #d6af36;
@@ -250,6 +251,10 @@ a:hover {
 
 #school-filter option[value="strathcona"] {
     color: var(--school-strathcona);
+}
+
+#school-filter option[value="ross"] {
+    color: var(--school-ross);
 }
 
 .custom-select {
@@ -911,6 +916,12 @@ a:hover {
 .school-strathcona,
 .standings-table tr.strathcona-row .school-tag {
     color: var(--school-strathcona);
+    font-weight: 500;
+}
+
+.school-strathcona,
+.standings-table tr.strathcona-row .school-tag {
+    color: var(--school-ross);
     font-weight: 500;
 }
 
