@@ -22,6 +22,7 @@
     --school-osa: #007902;
     --school-lillian: #d60000;
     --school-strathcona: #e66000;
+    --school-ross: #75b2dd;
 
     /* Rank Accent Colors */
     --rank-gold: #d6af36;
@@ -97,6 +98,19 @@ a {
 
 a:hover {
     scale: 1.02;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
+a.disabled-signup-link {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.85;
+    color: white !important;
 }
 
 .no-deco {
@@ -235,6 +249,16 @@ a:hover {
     outline: none;
 }
 
+.standings-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
 /* Custom School Filter */
 #school-filter option[value="ainlay"] {
     color: var(--school-ainlay);
@@ -250,6 +274,10 @@ a:hover {
 
 #school-filter option[value="strathcona"] {
     color: var(--school-strathcona);
+}
+
+#school-filter option[value="ross"] {
+    color: var(--school-ross);
 }
 
 .custom-select {
@@ -914,6 +942,12 @@ a:hover {
     font-weight: 500;
 }
 
+.school-strathcona,
+.standings-table tr.ross-row .school-tag {
+    color: var(--school-ross);
+    font-weight: 500;
+}
+
 .open-row {
     background: rgba(217, 130, 43, 0.04);
     border: 1px dashed var(--amber-primary);
@@ -938,6 +972,111 @@ a:hover {
 
 .closing-meta-muted a:hover {
     color: var(--amber-glow) !important;
+}
+
+/* FAQ Accordion Module */
+.faq-section {
+    padding: 5rem 5%;
+    border-bottom: 1px solid var(--bronze-border);
+    background: rgba(15, 11, 9, 0.45);
+    width: 100%;
+}
+
+.faq-header {
+    max-width: 750px;
+    margin-bottom: 2.5rem;
+}
+
+.faq-header h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--parchment);
+    margin-bottom: 0.8rem;
+}
+
+.faq-intro {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.faq-accordion {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: var(--bg-card);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--bronze-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--amber-primary);
+    box-shadow: 0 4px 15px var(--amber-dim);
+}
+
+.faq-question {
+    list-style: none;
+    padding: 1.2rem 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--parchment);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    color: var(--amber-glow);
+}
+
+.faq-arrow {
+    font-size: 0.8rem;
+    color: var(--amber-glow);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-item[open] .faq-question {
+    border-bottom: 1px solid var(--bronze-border);
+    color: var(--amber-glow);
+}
+
+.faq-content {
+    padding: 1.2rem 1.5rem;
+    color: var(--parchment);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background: rgba(9, 7, 6, 0.4);
+}
+
+.faq-content strong {
+    color: var(--amber-glow);
+}
+
+.faq-content a {
+    color: var(--amber-glow);
+    text-decoration: underline;
 }
 
 /* 7. MATCH RECORDS MODULE */
@@ -1019,7 +1158,7 @@ a:hover {
     border-radius: var(--radius-lg);
     padding: 1rem 1.25rem;
     display: grid;
-    grid-template-columns: 80px 140px 1fr auto;
+    grid-template-columns: 80px 240px 1fr auto;
     align-items: center;
     gap: 1.5rem;
     transition: var(--transition-fast);
@@ -1082,10 +1221,11 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
     border-right: 1px solid var(--bronze-border);
     padding-right: 1.5rem;
     height: 100%;
+    min-width: 220px;
 }
 
 .record-fixture {
@@ -1094,12 +1234,14 @@ a:hover {
     font-weight: 600;
     color: var(--amber-glow);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .record-outcome {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--amber-glow);
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .players-stack {
@@ -1160,9 +1302,10 @@ a:hover {
 }
 
 .game-meta-detail {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     letter-spacing: 0.03em;
+    white-space: nowrap;
 }
 
 .game-protocol-info {
@@ -1472,11 +1615,14 @@ a:hover {
         border-right: none;
         padding-right: 0;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         grid-column: span 2;
         border-bottom: 1px solid var(--bronze-border);
         padding-bottom: 0.5rem;
+        min-width: auto;
     }
     .players-stack {
         grid-column: span 2;
