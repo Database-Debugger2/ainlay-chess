@@ -48,6 +48,7 @@
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
+        <script src="/JS/standings.js" defer></script>
     </head>
     <body>
         <!-- Header / Navigation -->
@@ -144,6 +145,18 @@
 
         <!-- The League Standings Table -->
         <section id="league" class="league-section" style="padding-top: 3rem">
+            <div class="standings-toolbar">
+                <label for="league-standings-sort">Sort by</label>
+                <select id="league-standings-sort" class="sort-select standings-sort">
+                    <option value="rank">Rank (default)</option>
+                    <option value="points">Points (high to low)</option>
+                    <option value="wins">Wins (high to low)</option>
+                    <option value="draws">Draws (high to low)</option>
+                    <option value="losses">Losses (high to low)</option>
+                    <option value="name">Name (A to Z)</option>
+                    <option value="school">School (A to Z)</option>
+                </select>
+            </div>
             <div class="table-container">
                 <table class="standings-table">
                     <thead>
@@ -158,76 +171,365 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="rank-1 ainlay-row">
+                        <tr class="rank-1 lillian-row">
                             <td><span class="rank-badge">01</span></td>
-                            <td>The Endgame Heir</td>
-                            <td><span class="school-tag">Harry Ainlay High</span></td>
-                            <td>34</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td class="amber-text">107</td>
+                            <td>Ayden Chen</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="rank-2 osa-row">
                             <td><span class="rank-badge">02</span></td>
-                            <td>OSA Wraith</td>
+                            <td>Zizhe Chen</td>
                             <td><span class="school-tag">Old Scona Academic</span></td>
-                            <td>29</td>
-                            <td>6</td>
-                            <td>5</td>
-                            <td class="amber-text">91</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="rank-3 lillian-row">
+                        <tr class="rank-3 osa-row">
                             <td><span class="rank-badge">03</span></td>
-                            <td>Osborne Vanguard</td>
-                            <td><span class="school-tag">Lillian Osborne High</span></td>
-                            <td>25</td>
-                            <td>8</td>
-                            <td>7</td>
-                            <td class="amber-text">83</td>
+                            <td>Kylesh Bakshi</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="osa-row">
                             <td><span class="rank-badge">04</span></td>
-                            <td>Crown Architect</td>
+                            <td>Karthihan Nakeeran</td>
                             <td><span class="school-tag">Old Scona Academic</span></td>
-                            <td>21</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td class="amber-text">73</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="strathcona-row">
+                        <tr class="osa-row">
                             <td><span class="rank-badge">05</span></td>
-                            <td>Opening Theorist</td>
-                            <td><span class="school-tag">Strathcona High</span></td>
-                            <td>19</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td class="amber-text">68</td>
+                            <td>Rayansh Rathi</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="ross-row">
+                        <tr class="lillian-row">
                             <td><span class="rank-badge">06</span></td>
-                            <td>Midnight Gambiteer</td>
-                            <td><span class="school-tag">Ross Sheppard High</span></td>
-                            <td>15</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td class="amber-text">57</td>
+                            <td>Harjas Dhanoa</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="ainlay-row">
                             <td><span class="rank-badge">07</span></td>
-                            <td>Knight Rider</td>
+                            <td>Kayden Sawka</td>
                             <td><span class="school-tag">Harry Ainlay High</span></td>
-                            <td>12</td>
-                            <td>10</td>
-                            <td>18</td>
-                            <td class="amber-text">46</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">08</span></td>
+                            <td>Abdullah Malik</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">09</span></td>
+                            <td>Ziqi Tang</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">10</span></td>
+                            <td>Brian Ng</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">11</span></td>
+                            <td>Liam Lilko</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">12</span></td>
+                            <td>Richard Wang</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">13</span></td>
+                            <td>Mihai Tocea</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">14</span></td>
+                            <td>Jie</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">15</span></td>
+                            <td>Ian Gutwin</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">16</span></td>
+                            <td>Abdul Rafay Javaid</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="strathcona-row">
+                            <td><span class="rank-badge">17</span></td>
+                            <td>Yuri Troitsky</td>
+                            <td><span class="school-tag">Strathcona High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">18</span></td>
+                            <td>Rishi Kumar</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">19</span></td>
+                            <td>Abdi Sharaf</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">20</span></td>
+                            <td>Tasnim Mohamed</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">21</span></td>
+                            <td>Yan Koshkarev</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">22</span></td>
+                            <td>Bill Chau</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">23</span></td>
+                            <td>Jacob Vinebrooke</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">24</span></td>
+                            <td>Louis Boroditsky</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">25</span></td>
+                            <td>Steven Gan</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">26</span></td>
+                            <td>Sabbah Kassam</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">27</span></td>
+                            <td>Jia Xuan (Aiden) Li</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">28</span></td>
+                            <td>Yifeng Jiao</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">29</span></td>
+                            <td>Talha Cakmak</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">30</span></td>
+                            <td>Ahmed Khalid</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">31</span></td>
+                            <td>Hanh Tran</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">32</span></td>
+                            <td>Elina Sadhnani</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">33</span></td>
+                            <td>Ranbir Sarna</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">34</span></td>
+                            <td>Ben Elliott</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">35</span></td>
+                            <td>Juliusz Nowacki</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">36</span></td>
+                            <td>Kuoth Kel Heron</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ross-row">
+                            <td><span class="rank-badge">37</span></td>
+                            <td>Jessi Nanaquetung</td>
+                            <td><span class="school-tag">Ross Sheppard High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">38</span></td>
+                            <td>Andy Hao</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="osa-row">
+                            <td><span class="rank-badge">39</span></td>
+                            <td>Xander Chae</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
 
-                        <tr class="open-row">
+                        <tr class="open-row disabled">
                             <td class="rank-cell">
                                 <span class="rank-badge">--</span>
                             </td>
                             <td colspan="6" class="amber-text">
-                                This could be you 👈
+                                Registration for tournament 1 is closed! Check back in ~1-2 weeks for updates on future
+                                tournaments.
                                 <a
                                     href="#join-form"
                                     onclick="openForm()"
@@ -245,7 +547,7 @@
         <section class="faq-section">
             <div class="faq-header">
                 <span class="sub-title">EST. 2026 — FREQUENTLY ASKED QUESTIONS</span>
-                <h2>Tournament FAQ</h2>
+                <h2>The Grid FAQ</h2>
                 <p class="faq-intro">
                     Got questions about playing in The Grid? Click on a question below to expand the answer.
                 </p>
@@ -339,7 +641,9 @@
 
             <p class="closing-meta-muted">
                 We're waiting for you. Interested in Joining?
-                <a href="#join-form" onclick="openForm()">Fill this out</a>
+                <a href="#join-form" onclick="openForm()" class="disabled-signup-link"
+                    >Fill this out <strong><em>(Registration closed)</em></strong></a
+                >
             </p>
             <!-- Hidden Embedded Google Form Container -->
             <div
@@ -359,7 +663,7 @@
                 "
             >
                 <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSezNeXls9ZqHvJZ-Ihlh4lqJdmTLPjJjYwu7kmNXS-lw6MfoA/viewform?embedded=true"
+                    src=""
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0"
                     frameborder="0"
                     marginheight="0"

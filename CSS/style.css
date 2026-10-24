@@ -100,6 +100,19 @@ a:hover {
     scale: 1.02;
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
+a.disabled-signup-link {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.85;
+    color: white !important;
+}
+
 .no-deco {
     text-decoration: none;
     color: inherit;
@@ -234,6 +247,16 @@ a:hover {
 .sort-select:hover {
     border-color: var(--amber-primary);
     outline: none;
+}
+
+.standings-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 /* Custom School Filter */

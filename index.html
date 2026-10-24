@@ -48,6 +48,7 @@
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
+        <script src="/JS/standings.js" defer></script>
     </head>
     <body>
         <!-- Header / Navigation -->
@@ -86,7 +87,7 @@
                     <span class="amber-text">91</span>
                 </div>
                 <div class="sidebar-item">
-                    <span><span style="color: #996f49">03.</span>&ensp;Join the club </span>
+                    <span><span style="color: #996f49">03.</span>&ensp;Join the grid </span>
                     <span class="amber-text">83</span>
                 </div>
                 <div class="sidebar-link"><a href="#league" class="no-deco">FULL STANDINGS -</a></div>
@@ -109,7 +110,6 @@
                         <p class="role">Club President/Website Manager</p>
                     </div>
                 </a>
-                
                 <a href="/team#ashley">
                     <div class="card no-deco">
                         <div class="card-img-ashley placeholder-2" style="position: relative">
@@ -121,7 +121,6 @@
                         <p class="role">Public Relations</p>
                     </div>
                 </a>
-                
                 <a href="/team#aryan">
                     <div class="card no-deco">
                         <div class="card-img-aryan placeholder-3"></div>
@@ -140,6 +139,18 @@
                     <h2>The Grid</h2>
                 </div>
             </div>
+            <div class="standings-toolbar">
+                <label for="home-standings-sort">Sort by</label>
+                <select id="home-standings-sort" class="sort-select standings-sort">
+                    <option value="rank">Rank (default)</option>
+                    <option value="points">Points (high to low)</option>
+                    <option value="wins">Wins (high to low)</option>
+                    <option value="draws">Draws (high to low)</option>
+                    <option value="losses">Losses (high to low)</option>
+                    <option value="name">Name (A to Z)</option>
+                    <option value="school">School (A to Z)</option>
+                </select>
+            </div>
             <div class="table-container">
                 <table class="standings-table">
                     <thead>
@@ -155,76 +166,104 @@
                     </thead>
 
                     <tbody>
-                        <tr class="rank-1 ainlay-row">
+                        <tr class="rank-1 lillian-row">
                             <td><span class="rank-badge">01</span></td>
-                            <td>The Endgame Heir</td>
-                            <td><span class="school-tag">Harry Ainlay High</span></td>
-                            <td>34</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td class="amber-text">107</td>
+                            <td>Ayden Chen</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="rank-2 osa-row">
                             <td><span class="rank-badge">02</span></td>
-                            <td>OSA Wraith</td>
+                            <td>Zizhe Chen</td>
                             <td><span class="school-tag">Old Scona Academic</span></td>
-                            <td>29</td>
-                            <td>6</td>
-                            <td>5</td>
-                            <td class="amber-text">91</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="rank-3 lillian-row">
+                        <tr class="rank-3 osa-row">
                             <td><span class="rank-badge">03</span></td>
-                            <td>Osborne Vanguard</td>
-                            <td><span class="school-tag">Lillian Osborne High</span></td>
-                            <td>25</td>
-                            <td>8</td>
-                            <td>7</td>
-                            <td class="amber-text">83</td>
+                            <td>Kylesh Bakshi</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="osa-row">
                             <td><span class="rank-badge">04</span></td>
-                            <td>Crown Architect</td>
+                            <td>Karthihan Nakeeran</td>
                             <td><span class="school-tag">Old Scona Academic</span></td>
-                            <td>21</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td class="amber-text">73</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="strathcona-row">
+                        <tr class="osa-row">
                             <td><span class="rank-badge">05</span></td>
-                            <td>Opening Theorist</td>
-                            <td><span class="school-tag">Strathcona High</span></td>
-                            <td>19</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td class="amber-text">68</td>
+                            <td>Rayansh Rathi</td>
+                            <td><span class="school-tag">Old Scona Academic</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
-                        <tr class="ross-row">
+                        <tr class="lillian-row">
                             <td><span class="rank-badge">06</span></td>
-                            <td>Midnight Gambiteer</td>
-                            <td><span class="school-tag">Ross Sheppard High</span></td>
-                            <td>15</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td class="amber-text">57</td>
+                            <td>Harjas Dhanoa</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
                         <tr class="ainlay-row">
                             <td><span class="rank-badge">07</span></td>
-                            <td>Knight Rider</td>
+                            <td>Kayden Sawka</td>
                             <td><span class="school-tag">Harry Ainlay High</span></td>
-                            <td>12</td>
-                            <td>10</td>
-                            <td>18</td>
-                            <td class="amber-text">46</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="ainlay-row">
+                            <td><span class="rank-badge">08</span></td>
+                            <td>Abdullah Malik</td>
+                            <td><span class="school-tag">Harry Ainlay High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">09</span></td>
+                            <td>Ziqi Tang</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
+                        </tr>
+                        <tr class="lillian-row">
+                            <td><span class="rank-badge">10</span></td>
+                            <td>Brian Ng</td>
+                            <td><span class="school-tag">Lillian Osborne High</span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="amber-text">0</td>
                         </tr>
 
-                        <tr class="open-row">
+                        <tr class="open-row disabled">
                             <td class="rank-cell">
                                 <span class="rank-badge">--</span>
                             </td>
                             <td colspan="6" class="amber-text">
-                                This could be you 👈
+                                Registration for tournament 1 is closed! Check back in ~1-2 weeks for updates on future
+                                tournaments.
                                 <a
                                     href="/league#join-form"
                                     onclick="openForm()"
@@ -267,5 +306,61 @@
                 <p>Lets have some real fun.</p>
             </div>
         </section>
+        <script>
+            let konamiCode = [
+                "ArrowUp",
+                "ArrowUp",
+                "ArrowDown",
+                "ArrowDown",
+                "ArrowLeft",
+                "ArrowRight",
+                "ArrowLeft",
+                "ArrowRight",
+                "b",
+                "a",
+            ];
+            let konamiIndex = 0;
+
+            document.addEventListener("keydown", e => {
+                if (e.key === konamiCode[konamiIndex]) {
+                    konamiIndex++;
+                    if (konamiIndex === konamiCode.length) {
+                        triggerGrandmasterMode();
+                        konamiIndex = 0;
+                    }
+                } else {
+                    konamiIndex = 0;
+                }
+            });
+
+            function triggerGrandmasterMode() {
+                // Create secret banner
+                const banner = document.createElement("div");
+                banner.innerHTML = "👑 GRANDMASTER MODE ACTIVATED: +100 Aura Gained!";
+                banner.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #d9822b, #f2a541);
+            color: #090706;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 0.1em;
+            z-index: 99999;
+            box-shadow: 0 4px 20px rgba(217, 130, 43, 0.6);
+            animation: slideDown 0.5s ease;
+        `;
+                document.body.prepend(banner);
+
+                setTimeout(() => {
+                    banner.style.transition = "opacity 0.5s ease";
+                    banner.style.opacity = "0";
+                    setTimeout(() => banner.remove(), 500);
+                }, 4000);
+            }
+        </script>
     </body>
 </html>
