@@ -21,8 +21,9 @@
     --school-ainlay: #2c6fdb;
     --school-osa: #007902;
     --school-lillian: #d60000;
-    --school-strathcona: #e66000;
+    --school-scona: #e66000;
     --school-ross: #75b2dd;
+    --school-avalon: #b055ff;
 
     /* Rank Accent Colors */
     --rank-gold: #d6af36;
@@ -272,12 +273,16 @@ a.disabled-signup-link {
     color: var(--school-lillian);
 }
 
-#school-filter option[value="strathcona"] {
-    color: var(--school-strathcona);
+#school-filter option[value="scona"] {
+    color: var(--school-scona);
 }
 
 #school-filter option[value="ross"] {
     color: var(--school-ross);
+}
+
+#school-filter option[value="avalon"] {
+    color: var(--school-avalon);
 }
 
 .custom-select {
@@ -936,15 +941,21 @@ a.disabled-signup-link {
     font-weight: 500;
 }
 
-.school-strathcona,
-.standings-table tr.strathcona-row .school-tag {
-    color: var(--school-strathcona);
+.school-scona,
+.standings-table tr.scona-row .school-tag {
+    color: var(--school-scona);
     font-weight: 500;
 }
 
-.school-strathcona,
+.school-ross,
 .standings-table tr.ross-row .school-tag {
     color: var(--school-ross);
+    font-weight: 500;
+}
+
+.school-avalon,
+.standings-table tr.avalon-row .school-tag {
+    color: var(--school-avalon);
     font-weight: 500;
 }
 
@@ -1099,6 +1110,21 @@ a.disabled-signup-link {
     border-radius: var(--radius-md);
 }
 
+.records-filter-bar[hidden],
+.records-grid[hidden] {
+    display: none;
+}
+
+.records-announcement {
+    padding: 2rem;
+    border: 1px solid var(--bronze-border);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    color: var(--parchment);
+    font-size: 1rem;
+    text-align: center;
+}
+
 .filter-group {
     display: flex;
     align-items: center;
@@ -1158,7 +1184,7 @@ a.disabled-signup-link {
     border-radius: var(--radius-lg);
     padding: 1rem 1.25rem;
     display: grid;
-    grid-template-columns: 80px 240px 1fr auto;
+    grid-template-columns: 80px minmax(260px, 300px) minmax(0, 1fr);
     align-items: center;
     gap: 1.5rem;
     transition: var(--transition-fast);
@@ -1235,6 +1261,14 @@ a.disabled-signup-link {
     color: var(--amber-glow);
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.record-tournament {
+    color: var(--amber-glow);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .record-outcome {
