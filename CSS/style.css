@@ -905,6 +905,14 @@ a.disabled-signup-link {
     background: linear-gradient(90deg, rgba(205, 127, 50, 0.15) 0%, rgba(26, 21, 14, 0.4) 100%) !important;
 }
 
+.standings-table tr.rank-4 {
+    background: linear-gradient(90deg, rgba(217, 130, 43, 0.1) 0%, rgba(26, 21, 14, 0.3) 100%) !important;
+}
+
+.standings-table tr.rank-5 {
+    background: linear-gradient(90deg, rgba(217, 130, 43, 0.06) 0%, rgba(26, 21, 14, 0.2) 100%) !important;
+}
+
 .standings-table tr.rank-1 .rank-badge {
     color: var(--rank-gold) !important;
 }
@@ -915,6 +923,11 @@ a.disabled-signup-link {
 
 .standings-table tr.rank-3 .rank-badge {
     color: var(--rank-bronze) !important;
+}
+
+.standings-table tr.rank-4 .rank-badge,
+.standings-table tr.rank-5 .rank-badge {
+    color: var(--amber-primary) !important;
 }
 
 /* School Identifiers */
