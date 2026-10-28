@@ -196,6 +196,21 @@
 
             <!-- Cards Container -->
             <div class="records-grid" id="records-container">
+                <details class="faq-item round-dropdown-wrapper" data-tournament="1" open>
+    <summary class="faq-question">
+        <span>Tournament 1 Match Record + Tiebreakers</span>
+        <span class="faq-arrow">▼</span>
+    </summary>
+    <div
+        class="faq-content records-grid"
+        style="
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: transparent;
+            padding: 1rem 0 0 0;
+        "
+    >
                 <!-- ================= ROUND 1 DROPDOWN ================= -->
                 <details class="faq-item round-dropdown-wrapper" data-tournament="1" data-round="1" open>
                     <summary class="faq-question">
@@ -3992,9 +4007,8 @@
                             </div>
                         </div>
                     </div>
-                </details>
             </div>
-
+  </details>
             <!-- No Results Message -->
             <div id="no-results" class="no-results-message" style="display: none">No matching games found.</div>
         </section>
