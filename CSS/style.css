@@ -29,6 +29,7 @@
     --rank-gold: #d6af36;
     --rank-silver: #a7a7ad;
     --rank-bronze: #996f49;
+    --rank-top-w-nb: #dda7a5;
 
     /* Borders & Glows */
     --bronze-border: rgba(77, 56, 42, 0.6);
@@ -56,6 +57,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 html,
@@ -99,6 +108,10 @@ svg {
 }
 .avalon {
     color: #b055ff;
+}
+
+.rank-top-w-nb {
+    color: #dda7a5;
 }
 
 /* Typography Hierarchy */
