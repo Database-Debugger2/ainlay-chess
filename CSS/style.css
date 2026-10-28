@@ -81,6 +81,26 @@ svg {
     height: auto;
 }
 
+/* School colours */
+.ainlay {
+    color: #2c6fdb;
+}
+.osa {
+    color: #007902;
+}
+.lillian {
+    color: #d60000;
+}
+.scona {
+    color: #e66000;
+}
+.ross {
+    color: #75b2dd;
+}
+.avalon {
+    color: #b055ff;
+}
+
 /* Typography Hierarchy */
 h1,
 h2,
@@ -1225,13 +1245,24 @@ a.disabled-signup-link {
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
+    background: linear-gradient(145deg, rgba(18, 15, 12, 0.95), rgba(12, 9, 7, 0.85));
 }
 
 .endgame-board-slot img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transition:
+        opacity 0.25s ease,
+        transform 0.3s ease;
+}
+
+.endgame-board-slot:has(img[src]):not(img[src=""]),
+.endgame-board-slot img[src]:not([src=""]) {
+    opacity: 1;
 }
 
 .record-card:hover .endgame-board-slot img {
@@ -1239,6 +1270,8 @@ a.disabled-signup-link {
 }
 
 .image-placeholder {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1247,6 +1280,20 @@ a.disabled-signup-link {
     color: var(--text-muted);
     font-size: 0.65rem;
     text-align: center;
+    background: rgba(10, 8, 7, 0.2);
+    width: 100%;
+    height: 100%;
+    padding: 0.35rem;
+    box-sizing: border-box;
+}
+
+.board-slot-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .placeholder-icon {
